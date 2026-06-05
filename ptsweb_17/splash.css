@@ -1,0 +1,87 @@
+﻿* {
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Inter", "Segoe UI", Arial, Helvetica, sans-serif;
+    color: #ecf7ff;
+    background: radial-gradient(circle at top left, rgba(124, 183, 255, 0.22), transparent 22%),
+                radial-gradient(circle at bottom right, rgba(98, 147, 255, 0.20), transparent 18%),
+                linear-gradient(180deg, #081a3b 0%, #0f3768 40%, #0c2c55 100%);
+}
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: url("millenium.sc.webp") center/cover no-repeat;
+    opacity: 0.12;
+    pointer-events: none;
+    z-index: -1;
+}
+.page-shell {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 2rem;
+}
+.message-card {
+    max-width: 680px;
+    width: 100%;
+    padding: 3rem 2.5rem;
+    text-align: center;
+    background: rgba(8, 22, 58, 0.92);
+    border: 1px solid rgba(159, 200, 255, 0.18);
+    border-radius: 28px;
+    box-shadow: 0 30px 90px rgba(0, 0, 0, 0.28);
+    backdrop-filter: blur(14px);
+}
+.logo {
+    width: 100px;
+    height: auto;
+    margin-bottom: 1.5rem;
+    filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.25));
+}
+h1 {
+    margin: 0 0 1rem;
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    letter-spacing: -0.04em;
+    color: #f6fbff;
+}
+p {
+    margin: 0 0 2rem;
+    color: #d3e6ff;
+    line-height: 1.8;
+    font-size: 1.05rem;
+}
+.btn-home {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2rem;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #84e7ff, #3f81ff);
+    color: #051724;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+    box-shadow: 0 18px 35px rgba(34, 95, 182, 0.28);
+}
+.btn-home:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(135deg, #b2f1ff, #5c99ff);
+}
+@media (max-width: 680px) {
+    .message-card {
+        padding: 2rem 1.5rem;
+    }
+    h1 {
+        font-size: 2.25rem;
+    }
+    p {
+        font-size: 1rem;
+    }
+}

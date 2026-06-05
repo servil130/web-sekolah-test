@@ -1,0 +1,229 @@
+* {
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Inter", "Segoe UI", Arial, Helvetica, sans-serif;
+    color: #f4fbff;
+    background: radial-gradient(circle at top left, rgba(107, 200, 255, 0.25), transparent 20%), radial-gradient(circle at bottom right, rgba(110, 178, 255, 0.2), transparent 18%), linear-gradient(180deg, #0b2f58 0%, #0c3f82 40%, #0d4a9f 100%);
+}
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: url("millenium.sc.webp") center/cover no-repeat;
+    opacity: 0.14;
+    pointer-events: none;
+    z-index: -1;
+}
+header {
+    position: fixed;
+    inset: 0 0 auto 0;
+    z-index: 1000;
+    background: rgba(12, 44, 93, 0.92);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+nav {
+    max-width: 1180px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+}
+#logo {
+    width: 110px;
+    height: auto;
+    transition: transform 0.25s ease;
+}
+#logo:hover {
+    transform: scale(1.05) rotate(-1deg);
+}
+.nav-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.btn-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.9rem 1.2rem;
+    border-radius: 999px;
+    background: rgba(49, 136, 255, 0.96);
+    color: #f7fbff;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 18px 30px rgba(0, 0, 0, 0.18);
+}
+.btn-link:hover,
+.btn-link:focus-visible {
+    background: #88d0ff;
+    transform: translateY(-1px);
+    box-shadow: 0 24px 42px rgba(0, 0, 0, 0.22);
+}
+main {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 150px 1.5rem 3rem;
+    display: grid;
+    gap: 1.75rem;
+}
+.hero,
+.info-jurusan,
+.daftar {
+    background: rgba(18, 34, 95, 0.94);
+    border: 1px solid rgba(118, 191, 255, 0.18);
+    border-radius: 32px;
+    box-shadow: 0 34px 90px rgba(0, 0, 0, 0.26);
+    backdrop-filter: blur(14px);
+}
+.hero {
+    padding: clamp(2rem, 3vw, 3.5rem);
+    display: grid;
+    gap: 1rem;
+}
+.eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.65rem 1rem;
+    border-radius: 999px;
+    background: rgba(84, 182, 255, 0.22);
+    color: #d3f2ff;
+    font-size: 0.95rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+.hero h1 {
+    margin: 0;
+    font-size: clamp(2.8rem, 5vw, 4.2rem);
+    line-height: 1.02;
+    letter-spacing: -0.04em;
+    color: #f5fbff;
+}
+.hero p {
+    margin: 0;
+    max-width: 760px;
+    font-size: 1.1rem;
+    color: #d8e7ff;
+    line-height: 1.8;
+}
+.info-jurusan,
+.daftar {
+    padding: clamp(2rem, 2.5vw, 3rem);
+}
+.info-jurusan h2,
+.daftar h2 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: #d2ecff;
+    font-size: clamp(2rem, 3vw, 2.7rem);
+}
+.info-jurusan h3 {
+    color: #b5dfff;
+    font-size: 1.5rem;
+    margin: 1.75rem 0 0.85rem;
+}
+.info-jurusan p,
+.daftar p {
+    color: #cbdcf2;
+    line-height: 1.9;
+    font-size: 1rem;
+}
+.info-jurusan ul {
+    margin: 1rem 0 0;
+    padding: 0;
+    display: grid;
+    gap: 0.9rem;
+    list-style: none;
+}
+.info-jurusan li {
+    position: relative;
+    padding-left: 2.6rem;
+    color: #e9f3ff;
+    font-weight: 500;
+    line-height: 1.9;
+}
+.info-jurusan li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    top: 0.12rem;
+    color: #7dd3fc;
+    font-weight: 700;
+}
+.daftar {
+    display: grid;
+    gap: 1.8rem;
+    align-items: center;
+    justify-items: start;
+}
+.btn-daftar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 1.8rem;
+    border: none;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #7de6ff, #4090ff);
+    color: #071722;
+    font-size: 1.05rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+    box-shadow: 0 18px 38px rgba(37, 103, 186, 0.34);
+}
+.btn-daftar:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(135deg, #b1f3ff, #5ea8ff);
+    box-shadow: 0 24px 44px rgba(45, 114, 222, 0.35);
+}
+.btn-daftar:active {
+    transform: translateY(0) scale(0.98);
+}
+@media (max-width: 920px) {
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+    .nav-btn {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    main {
+        padding-top: 180px;
+    }
+}
+@media (max-width: 640px) {
+    .hero h1 {
+        font-size: 2.3rem;
+    }
+    .hero p,
+    .info-jurusan p,
+    .daftar p {
+        font-size: 1rem;
+    }
+    .info-jurusan,
+    .daftar,
+    .hero {
+        padding: 1.8rem;
+    }
+    .btn-link {
+        padding: 0.8rem 1rem;
+    }
+}

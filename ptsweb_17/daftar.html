@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar PPDB - Akademi Millenium</title>
+    <link rel="stylesheet" href="daftar.css">
+</head>
+<body id="top">
+    <header>
+        <nav id="navbar">
+            <img src="millenium.png" width="120" height="120" id="logo" alt="Millenium logo">
+            <ul class="nav-btn">
+                <li><a class="btn-link" href="pts.html#general">Pengenalan</a></li>
+                <li><a class="btn-link" href="pts.html#daftar">Daftar</a></li>
+        
+                <li><a class="btn-link" href="biaya.html">Biaya</a></li>
+                <li><a class="btn-link" href="info.html">Info Jurusan</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="intro">
+            <span class="eyebrow">Formulir Pendaftaran</span>
+            <h1>Isi data Anda untuk memulai proses PPDB Akademi Millenium</h1>
+            <p>Lengkapi data berikut dengan jujur. Tim kami akan menghubungi Anda untuk langkah selanjutnya.</p>
+        </section>
+        <section class="form-card">
+            <form action="splash.html" method="get">
+                <div class="field-group">
+                    <label for="fullname">Nama Lengkap</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="Masukkan nama lengkap" required>
+                </div>
+                <div class="field-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="contoh@email.com" required>
+                </div>
+                <div class="field-group">
+                    <label for="phone">Nomor Telepon</label>
+                    <input type="tel" id="phone" name="phone" placeholder="0812xxxxxxx" required>
+                </div>
+                <div class="field-group">
+                    <label for="birthdate">Tanggal Lahir</label>
+                    <input type="date" id="birthdate" name="birthdate" required>
+                </div>
+                <div class="field-group">
+                    <label for="study">Jurusan Pilihan</label>
+                    <select id="study" name="study" required>
+                        <option value="">Pilih jurusan</option>
+                        <option value="sains-komputer">Sains Komputer</option>
+                        <option value="rekayasa-perangkat-lunak">Rekayasa Perangkat Lunak</option>
+                        <option value="keamanan-siber">Keamanan Siber</option>
+                    </select>
+                </div>
+                <div class="field-group textarea-group">
+                    <label for="message">Catatan Tambahan</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Tuliskan motivasi atau pertanyaan Anda"></textarea>
+                </div>
+                <button class="btn-submit" type="submit">Kirim Pendaftaran</button>
+            </form>
+        </section>
+        <section class="steps-card">
+            <h2>Langkah Pendaftaran</h2>
+            <ol>
+                <li>Isi formulir pendaftaran di halaman ini.</li>
+                <li>Tunggu konfirmasi dari tim Akademi Millenium.</li>
+                <li>Lakukan pembayaran biaya pendaftaran sesuai instruksi.</li>
+                <li>Ikuti sesi orientasi dan mulai pelajaran.</li>
+            </ol>
+        </section>
+    </main>
+</body>
+</html>
